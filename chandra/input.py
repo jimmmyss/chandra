@@ -2,6 +2,7 @@ from typing import List
 import filetype
 from PIL import Image
 import pypdfium2 as pdfium
+Image.MAX_IMAGE_PIXELS = None  # disable decompression bomb limit for large PDF pages
 import pypdfium2.raw as pdfium_c
 
 from chandra.settings import settings
